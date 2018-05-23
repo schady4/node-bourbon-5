@@ -86,7 +86,7 @@ var sass = require('gulp-sass');
 gulp.task('sass', function () {
   gulp.src('path/to/input.scss')
     .pipe(sass({
-      // includePaths: require('node-bourbon').with('other/path', 'another/path')
+      // includePaths: require('node-bourbon-5').with('other/path', 'another/path')
       // - or -
       includePaths: require('node-bourbon-5').includePaths
     }))
@@ -110,7 +110,7 @@ grunt.initConfig({
   sass: {
     dist: {
       options: {
-        // includePaths: require('node-bourbon').with('other/path', 'another/path')
+        // includePaths: require('node-bourbon-5').with('other/path', 'another/path')
         // - or -
         includePaths: require('node-bourbon-5').includePaths
       },
@@ -136,7 +136,7 @@ grunt.initConfig({
   sass: {
     dist: {
       options: {
-        // loadPath: require('node-bourbon').with('other/path', 'another/path')
+        // loadPath: require('node-bourbon-5').with('other/path', 'another/path')
         // - or -
         loadPath: require('node-bourbon-5').includePaths
       },
@@ -207,5 +207,6 @@ the Bourbon library go to [thoughtbot, inc](http://thoughtbot.com/community):
 > Got questions? Need help? Tweet at [@phillapier](http://twitter.com/phillapier).
 
 # License
+node-bourbon-5 is Copyright © 2018 Jarett Schadlich. It is free software, and may be redistributed under the terms specified in the LICENSE file.
 
 node-bourbon is Copyright © 2013-2014 Michael LaCroix. It is free software, and may be redistributed under the terms specified in the LICENSE file.
