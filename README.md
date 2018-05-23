@@ -191,7 +191,7 @@ make test
 ```
 
 # Credits
-Michael LaCroix's original port of this project is here [node-bourbon(https://github.com/lacroixdesign/node-bourbon)]
+Michael LaCroix's original port of this project is here [node-bourbon](https://github.com/lacroixdesign/node-bourbon)
 
 
 This port of node-bourbon is maintained by Jarett Schadlich, credit goes to Michael LaCroix, however all credits for
