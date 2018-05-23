@@ -33,7 +33,7 @@ are looking for the original Ruby/Rails version, you can find it
 To install as a development dependency, run:
 
 ```bash
-npm install --save-dev node-bourbon
+npm install --save-dev node-bourbon-5
 ```
 
 If you need it in production, replace `--save-dev` with `--save`.
@@ -42,7 +42,7 @@ If you need it in production, replace `--save-dev` with `--save`.
 
 ## Basic Usage
 
-To use `node-bourbon` with tools like [gulp.js](#gulpjs-usage), [Grunt](#grunt-usage), or directly with [node-sass](#node-sass-usage), provide the path to Bourbon in your Sass config. There are a couple of convenience methods for this, depending on whether you want Sass to include additional directories or not.
+To use `node-bourbon-5` with tools like [gulp.js](#gulpjs-usage), [Grunt](#grunt-usage), or directly with [node-sass](#node-sass-usage), provide the path to Bourbon in your Sass config. There are a couple of convenience methods for this, depending on whether you want Sass to include additional directories or not.
 
 ### with() Function
 
@@ -51,7 +51,7 @@ The `with()` function will include any additional paths you pass as arguments.
 Returns an array of paths.
 
 ```javascript
-var bourbon = require('node-bourbon');
+var bourbon = require('node-bourbon-5');
 // Any of these will return an array of Bourbon paths plus your custom path(s)
 bourbon.with('path/to/stylesheets')
 bourbon.with('path/to/stylesheets1', 'path/to/stylesheets2')
@@ -63,7 +63,7 @@ bourbon.with(['path/to/stylesheets1', 'path/to/stylesheets2'])
 The `includePaths` property returns an array of Bourbon's paths to use in your config.
 
 ```javascript
-var bourbon = require('node-bourbon');
+var bourbon = require('node-bourbon-5');
 bourbon.includePaths // Array of Bourbon paths
 ```
 
@@ -88,7 +88,7 @@ gulp.task('sass', function () {
     .pipe(sass({
       // includePaths: require('node-bourbon').with('other/path', 'another/path')
       // - or -
-      includePaths: require('node-bourbon').includePaths
+      includePaths: require('node-bourbon-5').includePaths
     }))
     .pipe(gulp.dest('path/to/output.css'));
 });
@@ -101,7 +101,7 @@ gulp.task('sass', function () {
 The [grunt-sass](https://github.com/sindresorhus/grunt-sass) task uses
 [node-sass](https://github.com/andrew/node-sass)
 ([LibSass](https://github.com/hcatlin/libsass)) underneath, and is the recommended
-way to use Grunt with node-bourbon.
+way to use Grunt with node-bourbon-5.
 
 Example config:
 
@@ -112,7 +112,7 @@ grunt.initConfig({
       options: {
         // includePaths: require('node-bourbon').with('other/path', 'another/path')
         // - or -
-        includePaths: require('node-bourbon').includePaths
+        includePaths: require('node-bourbon-5').includePaths
       },
       files: {
         'path/to/output.css': 'path/to/input.scss'
@@ -138,7 +138,7 @@ grunt.initConfig({
       options: {
         // loadPath: require('node-bourbon').with('other/path', 'another/path')
         // - or -
-        loadPath: require('node-bourbon').includePaths
+        loadPath: require('node-bourbon-5').includePaths
       },
       files: {
         'path/to/output.css': 'path/to/input.scss'
@@ -154,7 +154,7 @@ Using it directly with [node-sass](https://github.com/andrew/node-sass).
 
 ```javascript
 var sass    = require('node-sass')
-var bourbon = require('node-bourbon');
+var bourbon = require('node-bourbon-5');
 
 sass.render({
   file: './application.scss',
@@ -172,12 +172,14 @@ sass.render({
 ```
 
 # Getting Help
+Again this is not the original project so use at your own risk.
 
+Below is the original project and maintainer.
 Feel free to tweet me with questions [@iamlacroix](https://twitter.com/iamlacroix), or [open a ticket](https://github.com/lacroixdesign/node-bourbon/issues) on GitHub.
 
 # Testing
 
-`node-bourbon` is tested against the examples provided in the
+`node-bourbon-5` is tested against the examples provided in the
 [Bourbon documentation](http://bourbon.io/docs). The tests check for compile
 errors, so if a feature compiles but the expected output is incorrect, be sure
 to [open a ticket](https://github.com/lacroixdesign/node-bourbon/issues).
@@ -189,9 +191,12 @@ make test
 ```
 
 # Credits
+Michael LaCroix's original port of this project is here [node-bourbon(https://github.com/lacroixdesign/node-bourbon)]
 
-This node-sass port is maintained by Michael LaCroix, however all credits for
+
+This port of node-bourbon is maintained by Jarett Schadlich, credit goes to Michael LaCroix, however all credits for
 the Bourbon library go to [thoughtbot, inc](http://thoughtbot.com/community):
+
 
 > ![thoughtbot](http://thoughtbot.com/images/tm/logo.png)
 >
