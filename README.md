@@ -1,6 +1,6 @@
 [![Bourbon Sass Mixin Library](http://images.thoughtbot.com/bourbon/bourbon-logo.svg)](http://bourbon.io)
 
-*This is a port of https://github.com/lacroixdesign/node-bourbon updating to version 5.1.0
+*This is a port of https://github.com/lacroixdesign/node-bourbon updating to version 6.0.0
 use at your own risk. I am not avail for help. I just needed an updated version.
 
 
